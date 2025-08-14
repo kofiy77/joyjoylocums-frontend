@@ -1,3 +1,9 @@
+These markdown elements are causing the syntax error at line 32.
+
+### **The Solution:**
+Replace your **entire** App.tsx file in GitHub with this clean code:
+
+```tsx
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
@@ -26,10 +32,3 @@ function App() {
 }
 
 export default App;
-```
-
-## Key Change:
-- Import: `import Home from "./pages/home";`
-- Route: `<Route path="/" component={Home} />`
-
-This will connect the complete JoyJoy Locums medical platform instead of showing the fallback message.
