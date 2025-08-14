@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Medical Blue Header Navigation */}
-      <nav style={{ backgroundColor: 'var(--header-blue)' }} className="shadow-lg">
+      <nav style={{ backgroundColor: '#1e2563' }} className="shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
@@ -106,15 +106,9 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section - Full Width with Background Image */}
-      <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-cover bg-center bg-no-repeat" 
-               style={{ 
-                 backgroundImage: `url('/attached_assets/image_1753233763433.jpeg')`,
-                 backgroundPosition: 'center center',
-                 backgroundSize: 'cover',
-                 transform: 'scaleX(-1)'
-               }}>
-        <div className="absolute inset-0 flex items-center" style={{ transform: 'scaleX(-1)' }}>
+      {/* Hero Section - Medical Blue Background instead of image */}
+      <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700">
+        <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <div className="space-y-8">
@@ -122,120 +116,26 @@ export default function Home() {
                   <Badge className="bg-blue-100 text-blue-900 px-4 py-2 text-sm font-medium">
                     Professional Medical Staffing
                   </Badge>
-                  <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-[#1e2563] drop-shadow-lg">
-                    Welcome to<br />
-                    <span className="text-[#1e2563]">JoyJoy Locums</span>
+                  <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-lg">
+                    Quality Medical Locums for UK Healthcare
                   </h1>
-
+                  <p className="text-xl text-blue-100 leading-relaxed max-w-lg">
+                    Connecting skilled medical professionals with GP practices across the UK. 
+                    Find your perfect locum position or hire qualified healthcare staff today.
+                  </p>
                 </div>
-                
-                {/* Call-to-Action Buttons - Stacked Vertically */}
-                <div className="flex flex-col gap-4 w-full max-w-md">
-                  <Link href="/gp-locums" className="w-full" onClick={() => window.scrollTo(0, 0)}>
-                    <Button 
-                      size="lg" 
-                      className="w-full px-8 py-4 text-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 hover:shadow-lg border-0 button-joyjoy"
-                      style={{ 
-                        backgroundColor: '#2563eb',
-                        color: '#ffffff',
-                        borderColor: 'transparent'
-                      }}
-                    >
-                      <span className="text-white font-semibold">GP Locum Opportunities</span>
-                      <HeartHandshake className="ml-2 h-5 w-5 text-white" />
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/gp-locums">
+                    <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold shadow-lg">
+                      Find Locum Work
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </Link>
-                  
-                  <Link href="/nurse-practitioner-locums" className="w-full" onClick={() => window.scrollTo(0, 0)}>
-                    <Button 
-                      size="lg" 
-                      className="w-full px-8 py-4 text-lg font-semibold bg-purple-600 text-white hover:bg-purple-700 transition-all duration-300 hover:shadow-lg border-0 button-joyjoy"
-                      style={{ 
-                        backgroundColor: '#9333ea',
-                        color: '#ffffff',
-                        borderColor: 'transparent'
-                      }}
-                    >
-                      <span className="text-white font-semibold">Advanced Nurse Practitioner Roles</span>
-                      <UserCheck className="ml-2 h-5 w-5 text-white" />
+                  <Link href="/gp-practices">
+                    <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg font-semibold">
+                      Hire Medical Staff
                     </Button>
                   </Link>
-                  
-                  <Link href="/pcn-locums" className="w-full" onClick={() => window.scrollTo(0, 0)}>
-                    <Button 
-                      size="lg" 
-                      className="w-full px-8 py-4 text-lg font-semibold bg-green-600 text-white hover:bg-green-700 transition-all duration-300 hover:shadow-lg border-0 button-joyjoy"
-                      style={{ 
-                        backgroundColor: '#16a34a',
-                        color: '#ffffff',
-                        borderColor: 'transparent'
-                      }}
-                    >
-                      <span className="text-white font-semibold">PCN Opportunities</span>
-                      <HeartHandshake className="ml-2 h-5 w-5 text-white" />
-                    </Button>
-                  </Link>
-                  
-                  <Link href="/clinical-pharmacist-locums" className="w-full" onClick={() => window.scrollTo(0, 0)}>
-                    <Button 
-                      size="lg" 
-                      className="w-full px-8 py-4 text-lg font-semibold bg-orange-600 text-white hover:bg-orange-700 transition-all duration-300 hover:shadow-lg border-0 button-joyjoy"
-                      style={{ 
-                        backgroundColor: '#ea580c',
-                        color: '#ffffff',
-                        borderColor: 'transparent'
-                      }}
-                    >
-                      <span className="text-white font-semibold">Clinical Pharmacist Roles</span>
-                      <UserCheck className="ml-2 h-5 w-5 text-white" />
-                    </Button>
-                  </Link>
-                  
-                  <Link href="/allied-healthcare-professionals" className="w-full" onClick={() => window.scrollTo(0, 0)}>
-                    <Button 
-                      size="lg" 
-                      className="w-full px-8 py-4 text-lg font-semibold bg-teal-600 text-white hover:bg-teal-700 transition-all duration-300 hover:shadow-lg border-0 button-joyjoy"
-                      style={{ 
-                        backgroundColor: '#0d9488',
-                        color: '#ffffff',
-                        borderColor: 'transparent'
-                      }}
-                    >
-                      <span className="text-white font-semibold">Allied Healthcare Professionals</span>
-                      <UserCheck className="ml-2 h-5 w-5 text-white" />
-                    </Button>
-                  </Link>
-                  
-                  <Link href="/gp-practices" className="w-full" onClick={() => window.scrollTo(0, 0)}>
-                    <Button 
-                      variant="outline" 
-                      size="lg" 
-                      className="w-full px-8 py-4 text-lg font-semibold bg-white hover:bg-blue-50 transition-all duration-300 hover:shadow-lg border-2 button-joyjoy"
-                      style={{ 
-                        backgroundColor: '#ffffff',
-                        color: '#1e3a8a',
-                        borderColor: '#ffffff'
-                      }}
-                    >
-                      <span className="text-blue-900 font-semibold">For GP Practices - Hire Locums</span>
-                      <ArrowRight className="ml-2 h-5 w-5 text-blue-900" />
-                    </Button>
-                  </Link>
-                </div>
-
-                <div className="flex items-center gap-6 pt-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-[#1e2563] drop-shadow-lg">500+</div>
-                    <div className="text-sm text-[#1e2563] drop-shadow-md">Active Locums</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-[#1e2563] drop-shadow-lg">150+</div>
-                    <div className="text-sm text-[#1e2563] drop-shadow-md">Partner Practices</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-[#1e2563] drop-shadow-lg">98%</div>
-                    <div className="text-sm text-[#1e2563] drop-shadow-md">Satisfaction Rate</div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -243,62 +143,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white">
+      {/* Services Overview Section */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: 'var(--header-blue)' }}>
-              Why Choose JoyJoy Locums?
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Medical Staffing Solutions
             </h2>
-            <p className="text-xl text-gray-600 mb-4">
-              Connect with premium locum opportunities across all medical specialties. 
-              Professional, reliable, and designed for healthcare excellence.
-            </p>
-            <p className="text-xl text-gray-600">
-              The professional platform for GPs, ANPs, Clinical Pharmacists, PCN roles, and Allied Healthcare Professionals
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive locum services for healthcare professionals and medical practices across the UK
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--medical-blue-100)' }}>
-                  <Search className="h-8 w-8" style={{ color: 'var(--medical-blue-600)' }} />
-                </div>
-                <CardTitle style={{ color: 'var(--header-blue)' }}>Smart Matching</CardTitle>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <CardTitle className="text-xl">GP Locums</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600">
-                  AI-powered matching connects you with the perfect locum opportunities based on your skills, location, and preferences.
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Find experienced GP locums for your practice
                 </p>
+                <Link href="/gp-locums">
+                  <Button variant="outline" className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--medical-blue-100)' }}>
-                  <Shield className="h-8 w-8" style={{ color: 'var(--medical-blue-600)' }} />
-                </div>
-                <CardTitle style={{ color: 'var(--header-blue)' }}>Secure Platform</CardTitle>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <UserCheck className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <CardTitle className="text-xl">Nurse Practitioners</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600">
-                  Professional-grade security with comprehensive verification processes for all medical professionals and practices.
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Advanced Nurse Practitioners for primary care
                 </p>
+                <Link href="/nurse-practitioner-locums">
+                  <Button variant="outline" className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--medical-blue-100)' }}>
-                  <TrendingUp className="h-8 w-8" style={{ color: 'var(--medical-blue-600)' }} />
-                </div>
-                <CardTitle style={{ color: 'var(--header-blue)' }}>Career Growth</CardTitle>
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Building2 className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <CardTitle className="text-xl">PCN Roles</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600">
-                  Build your medical career with diverse opportunities, professional development, and ongoing support from our team.
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Primary Care Network specialized positions
                 </p>
+                <Link href="/pcn-locums">
+                  <Button variant="outline" className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <CardTitle className="text-xl">Clinical Pharmacists</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Qualified clinical pharmacists for practices
+                </p>
+                <Link href="/clinical-pharmacist-locums">
+                  <Button variant="outline" className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
@@ -306,39 +228,38 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20" style={{ backgroundColor: 'var(--header-blue)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-16">
-            What Our Medical Professionals Say
-          </h2>
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              What Our Medical Professionals Say
+            </h2>
+          </div>
           
-          <div className="relative">
-            <Card className="bg-white shadow-xl">
-              <CardContent className="p-12">
-                <div className="flex justify-center mb-6">
+          <div className="relative max-w-4xl mx-auto">
+            <Card className="p-8 text-center">
+              <CardContent>
+                <div className="flex justify-center mb-4">
                   {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
-                    <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-2xl text-gray-700 italic mb-8 leading-relaxed">
+                <blockquote className="text-xl text-gray-700 mb-6">
                   "{testimonials[currentSlide].quote}"
-                </p>
+                </blockquote>
                 <div>
-                  <div className="font-semibold text-xl" style={{ color: 'var(--header-blue)' }}>
-                    {testimonials[currentSlide].name}
-                  </div>
-                  <div className="text-gray-500 text-lg">{testimonials[currentSlide].role}</div>
+                  <p className="font-semibold text-gray-900">{testimonials[currentSlide].name}</p>
+                  <p className="text-gray-600">{testimonials[currentSlide].role}</p>
                 </div>
               </CardContent>
             </Card>
             
-            {/* Pagination dots */}
-            <div className="flex justify-center mt-8 space-x-2">
+            <div className="flex justify-center mt-6 space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+                    index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
                   }`}
                   onClick={() => setCurrentSlide(index)}
                 />
@@ -348,42 +269,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6" style={{ color: 'var(--header-blue)' }}>
-            Ready to Start Your Medical Locum Journey?
+      {/* Call to Action Section */}
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Join thousands of medical professionals who trust JoyJoy Locums for their career advancement.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of medical professionals who trust JoyJoy Locums for their staffing needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/gp-locums" onClick={() => window.scrollTo(0, 0)}>
-              <Button 
-                size="lg" 
-                className="px-8 py-4 text-lg font-semibold transition-all duration-300 border-0 button-joyjoy"
-                style={{ 
-                  backgroundColor: '#2563eb',
-                  color: '#ffffff',
-                  borderColor: 'transparent'
-                }}
-              >
-                <span className="text-white font-semibold">Find GP Opportunities</span>
-                <ArrowRight className="ml-2 h-5 w-5 text-white" />
+            <Link href="/staff-registration">
+              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                Register as Medical Professional
               </Button>
             </Link>
-            <Link href="/nurse-practitioner-locums" onClick={() => window.scrollTo(0, 0)}>
-              <Button 
-                size="lg" 
-                className="px-8 py-4 text-lg font-semibold transition-all duration-300 border-0 button-joyjoy"
-                style={{ 
-                  backgroundColor: '#9333ea',
-                  color: '#ffffff',
-                  borderColor: 'transparent'
-                }}
-              >
-                <span className="text-white font-semibold">Find NP Opportunities</span>
-                <ArrowRight className="ml-2 h-5 w-5 text-white" />
+            <Link href="/gp-practice-enquiry">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg font-semibold">
+                Post a Medical Position
               </Button>
             </Link>
           </div>
@@ -391,63 +294,47 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: 'var(--header-blue)' }} className="text-white py-16">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center mb-4">
-                <HeartHandshake className="h-8 w-8 mr-3 text-white" />
-                <span className="text-2xl font-bold">JoyJoy Locums</span>
-              </div>
-              <p className="text-blue-200 mb-6 max-w-md">
-                The UK's leading platform for medical locum opportunities. 
-                Connecting exceptional healthcare professionals with premier medical practices.
-              </p>
-              <div className="space-y-2 text-blue-200">
-                <h4 className="text-lg font-semibold mb-3 text-white">Contact Us</h4>
-                <div>185 Mount Pleasant Lane</div>
-                <div>London, E5 9JG</div>
-                <div>Phone: 01293660094</div>
-                <div>Email: <a href="mailto:info@joyjoycare.co.uk" className="hover:text-white transition-colors">info@joyjoycare.co.uk</a></div>
-              </div>
-            </div>
-            
+          <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h4 className="text-lg font-semibold mb-4">For Medical Professionals</h4>
-              <ul className="space-y-2 text-blue-200">
-                <li><Link href="/gp-locums" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>GP Opportunities</Link></li>
-                <li><Link href="/nurse-practitioner-locums" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Advanced Nurse Practitioner Roles</Link></li>
-                <li><Link href="/auth" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Sign In</Link></li>
+              <div className="flex items-center mb-4">
+                <HeartHandshake className="h-8 w-8 mr-3" />
+                <span className="text-xl font-bold">JoyJoy Locums</span>
+              </div>
+              <p className="text-gray-400">
+                Professional medical staffing solutions for UK healthcare
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">For Medical Professionals</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/gp-locums" className="hover:text-white">GP Locums</Link></li>
+                <li><Link href="/nurse-practitioner-locums" className="hover:text-white">Nurse Practitioners</Link></li>
+                <li><Link href="/pcn-locums" className="hover:text-white">PCN Roles</Link></li>
+                <li><Link href="/clinical-pharmacist-locums" className="hover:text-white">Clinical Pharmacists</Link></li>
               </ul>
             </div>
-            
             <div>
-              <h4 className="text-lg font-semibold mb-4">For GP Practices</h4>
-              <ul className="space-y-2 text-blue-200">
-                <li><Link href="/gp-practice-enquiry" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Join Our Network</Link></li>
-                <li><Link href="/auth" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Practice Portal</Link></li>
+              <h3 className="text-lg font-semibold mb-4">For Practices</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/gp-practices" className="hover:text-white">Find Medical Staff</Link></li>
+                <li><Link href="/gp-practice-enquiry" className="hover:text-white">Post Requirements</Link></li>
+                <li><Link href="/compliance" className="hover:text-white">Compliance</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Support</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about-us" className="hover:text-white">About Us</Link></li>
+                <li><Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
+                <li><Link href="/terms-of-service" className="hover:text-white">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
-          
-          <div className="border-t border-blue-800 mt-12 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-4">
-              <div className="text-blue-200 text-sm">
-                © 2025 JoyJoy Locums. All rights reserved.
-              </div>
-              <div className="flex space-x-6 mt-4 md:mt-0">
-                <Link href="/privacy-policy" className="text-blue-200 hover:text-white text-sm transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms-of-service" className="text-blue-200 hover:text-white text-sm transition-colors">
-                  Terms of Service
-                </Link>
-              </div>
-            </div>
-            <div className="text-center text-blue-200 text-sm space-y-1">
-              <div>VAT Registration No: GB494539249</div>
-              <div>ICO Registration No: 00010487221</div>
-            </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 JoyJoy Locums. All rights reserved.</p>
+            <p className="mt-2 text-sm">✓ Medical Platform Successfully Loaded</p>
           </div>
         </div>
       </footer>
