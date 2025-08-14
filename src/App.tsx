@@ -3,18 +3,7 @@ import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-
-function Home() {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-blue-600 mb-4">JoyJoy Locums</h1>
-        <p className="text-xl text-gray-600">Medical Staffing Platform</p>
-        <p className="text-sm text-gray-500 mt-2">CLI upload successful! Ready for deployment</p>
-      </div>
-    </div>
-  );
-}
+import Home from "./pages/home";
 
 function App() {
   return (
@@ -37,3 +26,10 @@ function App() {
 }
 
 export default App;
+```
+
+## Key Change:
+- Import: `import Home from "./pages/home";`
+- Route: `<Route path="/" component={Home} />`
+
+This will connect the complete JoyJoy Locums medical platform instead of showing the fallback message.
