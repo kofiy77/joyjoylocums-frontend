@@ -205,7 +205,7 @@ export const getPostcodeToCity = (postcode: string): string => {
     'WD': 'Watford',
     'EN': 'Enfield',
     'IG': 'Ilford',
-    'E': 'London'
+    'E1': 'London'
   };
   
   return cityMap[postcodeArea] || 'Unknown';
