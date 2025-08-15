@@ -25,15 +25,18 @@ echo "Installing client dependencies only..."
 echo "Checking package.json exists:"
 ls -la package.json
 
-echo "Running npm install with verbose output:"
-npm install --no-audit --no-fund --verbose || {
+echo "Running npm install (compatible with any npm version):"
+npm install || {
     echo "npm install failed, trying alternative approaches..."
     
-    echo "Trying npm install without flags:"
+    echo "Clearing npm cache and trying again:"
+    npm cache clean --force
     npm install || {
-        echo "Basic npm install failed, trying yarn as fallback:"
-        npm install -g yarn
-        yarn install
+        echo "Still failing, trying with different flags:"
+        npm install --legacy-peer-deps || {
+            echo "Last resort: manual package installation..."
+            npm install react react-dom vite @vitejs/plugin-react typescript tailwindcss
+        }
     }
 }
 
