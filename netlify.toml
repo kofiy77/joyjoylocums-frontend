@@ -1,6 +1,6 @@
 [build]
   command = "chmod +x build-frontend.sh && ./build-frontend.sh"
-  publish = "client/dist"
+  publish = "dist/public"
   
 [build.environment]
   NODE_VERSION = "20.19.4"
