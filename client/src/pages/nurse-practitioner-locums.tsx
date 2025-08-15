@@ -111,7 +111,7 @@ export default function NursePractitionerLocumsPage() {
       {/* Hero Section - Full Width with Background Image */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-cover bg-center bg-no-repeat" 
                style={{ 
-                 backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.7), rgba(30, 37, 99, 0.7)), url('/attached_assets/image_1753233114194.jpeg')`,
+                 backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.7), rgba(30, 37, 99, 0.7)), url('/src/assets/image_1753233114194.jpeg')`,
                  backgroundPosition: 'center center',
                  backgroundSize: 'cover'
                }}>

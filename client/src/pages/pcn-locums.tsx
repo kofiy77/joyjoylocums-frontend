@@ -70,7 +70,7 @@ export default function PCNLocums() {
       <section 
         className="relative text-white py-20 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.85), rgba(59, 75, 140, 0.85)), url('/attached_assets/IMG_1667_1753631216038.jpeg')`
+          backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.85), rgba(59, 75, 140, 0.85)), url('/src/assets/IMG_1667_1753631216038.jpeg')`
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

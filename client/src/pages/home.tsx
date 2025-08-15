@@ -109,7 +109,7 @@ export default function Home() {
       {/* Hero Section - Full Width with Background Image */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-cover bg-center bg-no-repeat" 
                style={{ 
-                 backgroundImage: `url('/src/assets/shutterstock_98521178_1753236105261.jpg')`,
+                 backgroundImage: `url('/src/assets/image_1753233763433.jpeg')`,
                  backgroundPosition: 'center center',
                  backgroundSize: 'cover',
                  transform: 'scaleX(-1)'
@@ -338,66 +338,91 @@ export default function Home() {
                 <button
                   key={index}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-white' : 'bg-blue-400'
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
                   }`}
                   onClick={() => setCurrentSlide(index)}
                 />
               ))}
             </div>
-            
-            {/* Navigation arrows */}
-            <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-blue-200 transition-colors"
-              onClick={() => setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-            >
-              <ChevronLeft className="h-8 w-8" />
-            </button>
-            <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-blue-200 transition-colors"
-              onClick={() => setCurrentSlide((prev) => (prev + 1) % testimonials.length)}
-            >
-              <ChevronRight className="h-8 w-8" />
-            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6" style={{ color: 'var(--header-blue)' }}>
+            Ready to Start Your Medical Locum Journey?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Join thousands of medical professionals who trust JoyJoy Locums for their career advancement.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/gp-locums" onClick={() => window.scrollTo(0, 0)}>
+              <Button 
+                size="lg" 
+                className="px-8 py-4 text-lg font-semibold transition-all duration-300 border-0 button-joyjoy"
+                style={{ 
+                  backgroundColor: '#2563eb',
+                  color: '#ffffff',
+                  borderColor: 'transparent'
+                }}
+              >
+                <span className="text-white font-semibold">Find GP Opportunities</span>
+                <ArrowRight className="ml-2 h-5 w-5 text-white" />
+              </Button>
+            </Link>
+            <Link href="/nurse-practitioner-locums" onClick={() => window.scrollTo(0, 0)}>
+              <Button 
+                size="lg" 
+                className="px-8 py-4 text-lg font-semibold transition-all duration-300 border-0 button-joyjoy"
+                style={{ 
+                  backgroundColor: '#9333ea',
+                  color: '#ffffff',
+                  borderColor: 'transparent'
+                }}
+              >
+                <span className="text-white font-semibold">Find NP Opportunities</span>
+                <ArrowRight className="ml-2 h-5 w-5 text-white" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-16" style={{ backgroundColor: 'var(--header-blue)' }}>
+      <footer style={{ backgroundColor: 'var(--header-blue)' }} className="text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="text-white font-bold text-2xl mb-6 flex items-center">
-                <HeartHandshake className="h-8 w-8 mr-3" />
-                JoyJoy Locums
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="col-span-1 md:col-span-2">
+              <div className="flex items-center mb-4">
+                <HeartHandshake className="h-8 w-8 mr-3 text-white" />
+                <span className="text-2xl font-bold">JoyJoy Locums</span>
               </div>
-              <p className="text-blue-200 mb-6">
-                Professional medical staffing solutions connecting healthcare professionals with quality opportunities across the UK.
+              <p className="text-blue-200 mb-6 max-w-md">
+                The UK's leading platform for medical locum opportunities. 
+                Connecting exceptional healthcare professionals with premier medical practices.
               </p>
-              <div className="flex space-x-4">
-                <button className="text-blue-200 hover:text-white transition-colors">
-                  <Phone className="h-6 w-6" />
-                </button>
-                <button className="text-blue-200 hover:text-white transition-colors">
-                  <MapPin className="h-6 w-6" />
-                </button>
+              <div className="space-y-2 text-blue-200">
+                <h4 className="text-lg font-semibold mb-3 text-white">Contact Us</h4>
+                <div>185 Mount Pleasant Lane</div>
+                <div>London, E5 9JG</div>
+                <div>Phone: 01293660094</div>
+                <div>Email: <a href="mailto:info@joyjoycare.co.uk" className="hover:text-white transition-colors">info@joyjoycare.co.uk</a></div>
               </div>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">For Medical Professionals</h4>
+              <h4 className="text-lg font-semibold mb-4">For Medical Professionals</h4>
               <ul className="space-y-2 text-blue-200">
-                <li><Link href="/gp-locums" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>GP Locum Opportunities</Link></li>
-                <li><Link href="/nurse-practitioner-locums" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Nurse Practitioner Roles</Link></li>
-                <li><Link href="/pcn-locums" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>PCN Opportunities</Link></li>
-                <li><Link href="/clinical-pharmacist-locums" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Clinical Pharmacist Roles</Link></li>
-                <li><Link href="/staff-registration" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Register as Professional</Link></li>
+                <li><Link href="/gp-locums" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>GP Opportunities</Link></li>
+                <li><Link href="/nurse-practitioner-locums" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Advanced Nurse Practitioner Roles</Link></li>
                 <li><Link href="/auth" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Sign In</Link></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">For GP Practices</h4>
+              <h4 className="text-lg font-semibold mb-4">For GP Practices</h4>
               <ul className="space-y-2 text-blue-200">
                 <li><Link href="/gp-practice-enquiry" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Join Our Network</Link></li>
                 <li><Link href="/auth" className="hover:text-white transition-colors" onClick={() => window.scrollTo(0, 0)}>Practice Portal</Link></li>
