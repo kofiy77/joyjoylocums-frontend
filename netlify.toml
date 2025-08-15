@@ -1,24 +1,12 @@
 [build]
-  command = "chmod +x build-frontend.sh && ./build-frontend.sh"
+  command = "npm run build"
   publish = "dist/public"
   
 [build.environment]
-  NODE_VERSION = "20.19.4"
+  NODE_VERSION = "18.18.0"
+  NPM_VERSION = "9.8.1"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "max-age=31536000, immutable"
