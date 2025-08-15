@@ -25,6 +25,7 @@ import {
   Search,
   HeartHandshake
 } from "lucide-react";
+import homeHeroImage from "@/assets/image_1753233763433.jpeg";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -109,7 +110,7 @@ export default function Home() {
       {/* Hero Section - Full Width with Background Image */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-cover bg-center bg-no-repeat" 
                style={{ 
-                 backgroundImage: `url('/src/assets/image_1753233763433.jpeg')`,
+                 backgroundImage: `url(${homeHeroImage})`,
                  backgroundPosition: 'center center',
                  backgroundSize: 'cover',
                  transform: 'scaleX(-1)'

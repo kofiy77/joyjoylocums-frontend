@@ -28,6 +28,7 @@ import {
   Eye,
   Zap
 } from "lucide-react";
+import ahpHeroImage from "@/assets/image_1753633159610.png";
 
 export default function AlliedHealthcareProfessionals() {
   return (
@@ -75,7 +76,7 @@ export default function AlliedHealthcareProfessionals() {
       <section 
         className="relative text-white py-20 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.75), rgba(59, 75, 140, 0.75)), url('/src/assets/image_1753633159610.png')`
+          backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.75), rgba(59, 75, 140, 0.75)), url(${ahpHeroImage})`
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

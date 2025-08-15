@@ -14,6 +14,7 @@ import {
   CheckCircle,
   HeartHandshake
 } from "lucide-react";
+import gpHeroImage from "@/assets/shutterstock_430385620_1753232327688.jpg";
 
 export default function GPLocumsPage() {
   const benefits = [
@@ -98,7 +99,7 @@ export default function GPLocumsPage() {
       {/* Hero Section - Full Width with Background Image */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-cover bg-center bg-no-repeat" 
                style={{ 
-                 backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.7), rgba(30, 37, 99, 0.7)), url('/src/assets/shutterstock_430385620_1753232327688.jpg')`,
+                 backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.7), rgba(30, 37, 99, 0.7)), url(${gpHeroImage})`,
                  backgroundPosition: 'center center',
                  backgroundSize: 'cover'
                }}>
