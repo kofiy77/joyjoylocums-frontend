@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import nhsLanyardsImage from "@assets/image_1753827622629.png";
+
 import { 
   Shield, 
   FileCheck, 
@@ -65,10 +65,6 @@ export default function Compliance() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#1e2563] to-[#3b4b8c] text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: `url(${nhsLanyardsImage})` }}
-        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center space-y-6">
             <Badge className="bg-blue-100 text-blue-900 px-4 py-2 text-sm font-medium">
