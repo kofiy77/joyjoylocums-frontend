@@ -13,7 +13,7 @@ export default defineConfig({
       "@/lib": path.resolve(__dirname, "src/lib"),
       "@/hooks": path.resolve(__dirname, "src/hooks"),
       "@/utils": path.resolve(__dirname, "src/utils"),
-      "@/assets": path.resolve(__dirname, "../attached_assets")
+      "@/assets": path.resolve(__dirname, "src/assets")
     },
   },
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
@@ -38,9 +38,9 @@ export default defineConfig({
         warn(warning);
       },
     },
-    copyPublicDir: true,
+    copyPublicDir: false,
   },
-  publicDir: "../attached_assets",
+  publicDir: false,
   define: {
     __DEV__: false,
   },
