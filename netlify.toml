@@ -1,9 +1,10 @@
 [build]
-  command = "cd client && npm install && npx vite build"
+  command = "cd client && npm ci && npx vite build --config vite.config.prod.ts"
   publish = "client/dist"
   
 [build.environment]
   NODE_VERSION = "20.19.4"
+  NPM_FLAGS = "--verbose"
 
 [[redirects]]
   from = "/*"
