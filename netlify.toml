@@ -1,5 +1,5 @@
 [build]
-  command = "cd client && npm ci && npx vite build --config vite.config.prod.ts"
+  command = "cd client && npm ci && NODE_ENV=production npx vite build --config vite.config.prod.ts"
   publish = "client/dist"
   
 [build.environment]
