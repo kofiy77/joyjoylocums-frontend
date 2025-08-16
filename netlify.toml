@@ -1,5 +1,5 @@
 [build]
-  command = "cd client && vite build"
+  command = "vite build --config client/vite.config.ts --outDir client/dist"
   publish = "client/dist"
   
 [build.environment]
