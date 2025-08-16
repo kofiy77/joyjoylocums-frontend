@@ -22,8 +22,20 @@ export default defineConfig({
     sourcemap: false,
     emptyOutDir: true,
     rollupOptions: {
+      external: [],
       output: {
         manualChunks: undefined,
+      },
+      onwarn(warning, warn) {
+        // Suppress "Module level directives cause errors when bundled" warnings
+        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
+          return;
+        }
+        // Suppress external dependency warnings
+        if (warning.code === 'UNRESOLVED_IMPORT') {
+          return;
+        }
+        warn(warning);
       },
     },
     copyPublicDir: true,
