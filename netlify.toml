@@ -1,5 +1,5 @@
 [build]
-  command = "cd client && vite build && cd .. && mv client/dist dist/public"
+  command = "vite build --outDir=dist/public"
   publish = "dist/public"
   
 [build.environment]
