@@ -1,6 +1,6 @@
 [build]
-  command = "vite build --outDir=dist/public"
-  publish = "dist/public"
+  command = "vite build"
+  publish = "client/dist"
   
 [build.environment]
   NODE_VERSION = "20.19.4"
