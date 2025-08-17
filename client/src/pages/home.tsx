@@ -25,8 +25,7 @@ import {
   Search,
   HeartHandshake
 } from "lucide-react";
-import homeHeroImage from "@/assets/image_1753233763433.jpeg";
-
+import homeHeroImage from "../assets/image_1753233763433.jpeg";
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
