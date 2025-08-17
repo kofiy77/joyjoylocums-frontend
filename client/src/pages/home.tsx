@@ -110,7 +110,7 @@ export default function Home() {
       {/* Hero Section - Full Width with Background Image */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-cover bg-center bg-no-repeat" 
                style={{ 
-                 backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.7), rgba(30, 37, 99, 0.7)), url(${homeHeroImage})`,
+                 backgroundImage: `url(${homeHeroImage})`,
                  backgroundPosition: 'center center',
                  backgroundSize: 'cover',
                  transform: 'scaleX(-1)'
