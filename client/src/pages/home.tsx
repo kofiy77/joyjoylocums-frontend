@@ -123,6 +123,12 @@ export default function Home() {
                   <Badge className="bg-blue-100 text-blue-900 px-4 py-2 text-sm font-medium">
                     Professional Medical Staffing
                   </Badge>
+                  <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-white">
+                    Premium<br />
+                    <span className="text-white">medical locum</span><br />
+                    opportunities
+                  </h1>
+
                 </div>
                 
                 {/* Call-to-Action Buttons - Stacked Vertically */}
@@ -450,3 +456,4 @@ export default function Home() {
     </div>
   );
 }
+
