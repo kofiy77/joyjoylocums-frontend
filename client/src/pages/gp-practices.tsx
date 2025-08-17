@@ -19,7 +19,7 @@ import {
   Handshake,
   HeartHandshake
 } from "lucide-react";
-import practiceImage from "@/assets/image_1753233763433.jpeg";
+import practiceImage from "../assets/shutterstock_98521178_1753236105261.jpg";
 
 export default function GPPractices() {
   return (
