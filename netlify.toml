@@ -1,5 +1,5 @@
 [build]
-  command = "cd client && npm ci && NODE_ENV=production npx vite build --config vite.config.prod.ts"
+  command = "cd client && npm install && NODE_ENV=production npx vite build --config vite.config.prod.ts"
   publish = "client/dist"
   
 [build.environment]
@@ -10,6 +10,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
 
 [[headers]]
   for = "/*"
