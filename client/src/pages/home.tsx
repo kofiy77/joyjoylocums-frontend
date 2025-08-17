@@ -26,6 +26,7 @@ import {
   HeartHandshake
 } from "lucide-react";
 import homeHeroImage from "../assets/image_1753233763433.jpeg";
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
@@ -455,4 +456,3 @@ export default function Home() {
     </div>
   );
 }
-

@@ -131,7 +131,7 @@ export default function GPPractices() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: '#1e2563' }}>
+            <h2 className="text-4xl font-bold mb-4" style={{ color: 'var(--header-blue)' }}>
               Why Partner with JoyJoy Locums?
             </h2>
             <p className="text-xl text-gray-600">
@@ -145,7 +145,7 @@ export default function GPPractices() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <UserCheck className="h-8 w-8 text-blue-600" />
                 </div>
-                <CardTitle className="text-xl font-semibold" style={{ color: '#1e2563' }}>
+                <CardTitle className="text-xl font-semibold" style={{ color: 'var(--header-blue)' }}>
                   Vetted Professionals
                 </CardTitle>
               </CardHeader>
@@ -162,7 +162,7 @@ export default function GPPractices() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-blue-600" />
                 </div>
-                <CardTitle className="text-xl font-semibold" style={{ color: '#1e2563' }}>
+                <CardTitle className="text-xl font-semibold" style={{ color: 'var(--header-blue)' }}>
                   Rapid Response
                 </CardTitle>
               </CardHeader>
@@ -179,7 +179,7 @@ export default function GPPractices() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-blue-600" />
                 </div>
-                <CardTitle className="text-xl font-semibold" style={{ color: '#1e2563' }}>
+                <CardTitle className="text-xl font-semibold" style={{ color: 'var(--header-blue)' }}>
                   Full Compliance
                 </CardTitle>
               </CardHeader>
@@ -198,7 +198,7 @@ export default function GPPractices() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: '#1e2563' }}>
+            <h2 className="text-4xl font-bold mb-4" style={{ color: 'var(--header-blue)' }}>
               Our Services
             </h2>
             <p className="text-xl text-gray-600">
@@ -213,7 +213,7 @@ export default function GPPractices() {
                   <Handshake className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#1e2563' }}>
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--header-blue)' }}>
                     GP Locums
                   </h3>
                   <p className="text-gray-600">
@@ -225,15 +225,15 @@ export default function GPPractices() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <UserCheck className="h-6 w-6 text-blue-600" />
+                  <Users className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#1e2563' }}>
-                    Advanced Nurse Practitioners
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--header-blue)' }}>
+                    Nurse Practitioners
                   </h3>
                   <p className="text-gray-600">
-                    Qualified ANPs for independent practice, chronic disease management, 
-                    and urgent care consultations.
+                    Qualified Advanced Nurse Practitioners for chronic disease management, 
+                    minor illness clinics, and routine appointments.
                   </p>
                 </div>
               </div>
@@ -243,37 +243,60 @@ export default function GPPractices() {
                   <Calendar className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#1e2563' }}>
-                    Flexible Scheduling
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--header-blue)' }}>
+                    Planned & Emergency Cover
                   </h3>
                   <p className="text-gray-600">
-                    From single sessions to long-term placements. 
-                    Weekend and evening cover available.
+                    Book in advance for holidays and training, or call us for emergency 
+                    same-day cover when staff are unexpectedly unavailable.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Award className="h-6 w-6 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--header-blue)' }}>
+                    Specialist Services
+                  </h3>
+                  <p className="text-gray-600">
+                    Access to specialists including contraception, travel health, 
+                    mental health, and chronic disease management expertise.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-blue-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6" style={{ color: '#1e2563' }}>
-                Quick Stats
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-6" style={{ color: 'var(--header-blue)' }}>
+                Simple Booking Process
               </h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Average placement time</span>
-                  <span className="font-semibold" style={{ color: '#1e2563' }}>4 hours</span>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                    1
+                  </div>
+                  <p className="text-gray-700">Submit your request with dates and requirements</p>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Success rate</span>
-                  <span className="font-semibold" style={{ color: '#1e2563' }}>98%</span>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                    2
+                  </div>
+                  <p className="text-gray-700">Receive matched locum profiles within 2 hours</p>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Client satisfaction</span>
-                  <span className="font-semibold" style={{ color: '#1e2563' }}>4.9/5</span>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                    3
+                  </div>
+                  <p className="text-gray-700">Confirm your preferred locum</p>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Emergency response</span>
-                  <span className="font-semibold" style={{ color: '#1e2563' }}>1 hour</span>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                    4
+                  </div>
+                  <p className="text-gray-700">We handle all admin and invoicing</p>
                 </div>
               </div>
             </div>
@@ -283,49 +306,69 @@ export default function GPPractices() {
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: '#1e2563' }}>
-              What Our Practice Partners Say
+            <h2 className="text-4xl font-bold mb-4" style={{ color: 'var(--header-blue)' }}>
+              What Practice Managers Say
             </h2>
             <p className="text-xl text-gray-600">
-              Real feedback from GP practices across the UK
+              Trusted by practices across the UK
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
+              <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current text-yellow-400" />
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4 italic">
-                  "JoyJoy Locums has been our go-to partner for over 2 years. 
-                  Their locums are professional, well-prepared, and integrate seamlessly with our team."
+                  "JoyJoy Locums has been a lifesaver for our practice. Professional service, 
+                  vetted clinicians, and always available when we need emergency cover."
                 </p>
-                <div className="font-semibold" style={{ color: '#1e2563' }}>
-                  Dr. Michael Roberts
+                <div className="font-semibold" style={{ color: 'var(--header-blue)' }}>
+                  Sarah Johnson
                 </div>
                 <div className="text-sm text-gray-500">
-                  Practice Manager, Westfield Medical Centre
+                  Practice Manager, Hillside Medical Centre
                 </div>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
+              <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current text-yellow-400" />
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic">
+                  "The quality of locums is exceptional. They integrate seamlessly with our team 
+                  and patients are always satisfied with the care received."
+                </p>
+                <div className="font-semibold" style={{ color: 'var(--header-blue)' }}>
+                  Dr. Michael Thompson
+                </div>
+                <div className="text-sm text-gray-500">
+                  Senior Partner, Riverside Health Group
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4 italic">
                   "Reliable, professional, and cost-effective. JoyJoy Locums understands 
                   the pressures we face and always delivers quality solutions."
                 </p>
-                <div className="font-semibold" style={{ color: '#1e2563' }}>
+                <div className="font-semibold" style={{ color: 'var(--header-blue)' }}>
                   Emma Davies
                 </div>
                 <div className="text-sm text-gray-500">

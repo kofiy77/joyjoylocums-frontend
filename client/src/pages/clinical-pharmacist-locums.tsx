@@ -91,7 +91,7 @@ export default function ClinicalPharmacistLocums() {
               </p>
               <div className="flex justify-center sm:justify-start">
                 <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-blue-50">
-                  <Link href="/register">
+                  <Link href="/staff-registration">
                     <UserCheck className="w-5 h-5 mr-2" />
                     Register as Clinical Pharmacist
                   </Link>
@@ -450,7 +450,7 @@ export default function ClinicalPharmacistLocums() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-blue-50">
-              <Link href="/register">
+              <Link href="/staff-registration">
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Register as Clinical Pharmacist
               </Link>

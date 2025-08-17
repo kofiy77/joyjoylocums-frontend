@@ -14,7 +14,8 @@ import {
   CheckCircle,
   HeartHandshake
 } from "lucide-react";
-import gpHeroImage from "../assets/shutterstock_430385620_1753232327688.jpg"
+import gpHeroImage from "../assets/shutterstock_430385620_1753232327688.jpg";
+
 export default function GPLocumsPage() {
   const benefits = [
     {
@@ -121,7 +122,7 @@ export default function GPLocumsPage() {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/register">
+                  <Link href="/staff-registration">
                     <Button 
                       size="lg" 
                       className="px-8 py-4 text-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 hover:shadow-lg"
@@ -230,20 +231,20 @@ export default function GPLocumsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20" style={{ backgroundColor: '#1e2563' }}>
+      <section className="py-20 bg-[#1e2563]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Start Your GP Locum Career?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join hundreds of GPs who trust JoyJoy Locums for flexible, rewarding work opportunities.
+          <p className="text-xl text-blue-200 mb-8">
+            Join hundreds of GPs who have found flexible, rewarding work through JoyJoy Locums
           </p>
           <Link href="/register">
             <Button 
               size="lg" 
-              className="bg-white text-[#1e2563] hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+              className="px-8 py-4 text-lg font-semibold bg-white text-[#1e2563] hover:bg-blue-50 transition-all duration-300"
             >
-              Register Today
+              Register as a GP Locum
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
@@ -251,40 +252,49 @@ export default function GPLocumsPage() {
       </section>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: '#1e2563' }} className="text-white py-16">
+      <footer className="bg-[#1e2563] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center mb-4">
+            <div className="space-y-4">
+              <div className="flex items-center">
                 <HeartHandshake className="h-8 w-8 mr-3 text-white" />
                 <span className="text-2xl font-bold">JoyJoy Locums</span>
               </div>
-              <p className="text-blue-200 mb-6 max-w-md">
-                The UK's leading platform for GP locum opportunities. 
-                Connecting exceptional medical professionals with premier practices.
+              <p className="text-blue-200">
+                Professional medical staffing solutions for GPs and Nurse Practitioners across the UK.
               </p>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">For Medical Professionals</h4>
+              <h3 className="text-lg font-semibold mb-4">For Medical Professionals</h3>
               <ul className="space-y-2 text-blue-200">
-                <li><Link href="/gp-locums" className="hover:text-white transition-colors">GP Opportunities</Link></li>
-                <li><Link href="/nurse-practitioner-locums" className="hover:text-white transition-colors">Advanced Nurse Practitioner</Link></li>
-                <li><Link href="/register" className="hover:text-white transition-colors">Register</Link></li>
+                <li><Link href="/gp-locums" className="hover:text-white transition-colors">GP Locums</Link></li>
+                <li><Link href="/nurse-practitioner-locums" className="hover:text-white transition-colors">Nurse Practitioner Locums</Link></li>
+                <li><Link href="/auth" className="hover:text-white transition-colors">Professional Portal</Link></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">For GP Practices</h4>
+              <h3 className="text-lg font-semibold mb-4">For Practices</h3>
               <ul className="space-y-2 text-blue-200">
-                <li><Link href="/gp-practice-enquiry" className="hover:text-white transition-colors">Join Our Network</Link></li>
+                <li><Link href="/gp-practice-enquiry" className="hover:text-white transition-colors">Hire Locums</Link></li>
                 <li><Link href="/auth" className="hover:text-white transition-colors">Practice Portal</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Support</h3>
+              <ul className="space-y-2 text-blue-200">
+                <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                <li className="hover:text-white transition-colors">support@joyjoylocums.com</li>
+                <li className="hover:text-white transition-colors">0800 123 4567</li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-blue-800 mt-12 pt-8 text-center text-blue-200 text-sm">
-            © 2025 JoyJoy Locums. All rights reserved.
+          <div className="border-t border-blue-800 mt-12 pt-8 text-center text-blue-200">
+            <p>&copy; 2025 JoyJoy Locums. Professional medical staffing solutions.</p>
           </div>
         </div>
       </footer>
