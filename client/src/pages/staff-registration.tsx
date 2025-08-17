@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils";
 import { useMutation } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
+import HotReloadFix from "@/components/HotReloadFix";
 
 const healthcareRoles = [
   "Healthcare Assistant",
@@ -693,13 +694,16 @@ export default function StaffRegistration() {
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                       <FormControl>
                         <Checkbox
-                          checked={field.value}
+                          checked={!!field.value}
                           onCheckedChange={(checked) => {
-                            field.onChange(checked);
+                            const booleanValue = checked === true;
+                            field.onChange(booleanValue);
                             // If UK passport holder is checked, automatically set hasValid to true
-                            if (checked) {
+                            if (booleanValue) {
                               form.setValue(`certifications.${index}.hasValid` as any, true);
+                              form.trigger(`certifications.${index}.hasValid` as any);
                             }
+                            form.trigger(`certifications.${index}.isUkPassportHolder` as any);
                           }}
                         />
                       </FormControl>
@@ -719,8 +723,12 @@ export default function StaffRegistration() {
                       <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                         <FormControl>
                           <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
+                            checked={!!field.value}
+                            onCheckedChange={(checked) => {
+                              const booleanValue = checked === true;
+                              field.onChange(booleanValue);
+                              form.trigger(`certifications.${index}.hasValid` as any);
+                            }}
                           />
                         </FormControl>
                         <div className="space-y-1 leading-none">
@@ -739,8 +747,12 @@ export default function StaffRegistration() {
                   <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                     <FormControl>
                       <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
+                        checked={!!field.value}
+                        onCheckedChange={(checked) => {
+                          const booleanValue = checked === true;
+                          field.onChange(booleanValue);
+                          form.trigger(`certifications.${index}.hasValid` as any);
+                        }}
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
@@ -816,8 +828,12 @@ export default function StaffRegistration() {
               <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
                 <FormControl>
                   <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
+                    checked={!!field.value}
+                    onCheckedChange={(checked) => {
+                      const booleanValue = checked === true;
+                      field.onChange(booleanValue);
+                      form.trigger(`availability.${day}`);
+                    }}
                   />
                 </FormControl>
                 <div className="space-y-1 leading-none">
@@ -927,8 +943,12 @@ export default function StaffRegistration() {
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
+                      checked={!!field.value}
+                      onCheckedChange={(checked) => {
+                        const booleanValue = checked === true;
+                        field.onChange(booleanValue);
+                        form.trigger("consentReferenceChecks");
+                      }}
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
@@ -948,8 +968,12 @@ export default function StaffRegistration() {
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
+                      checked={!!field.value}
+                      onCheckedChange={(checked) => {
+                        const booleanValue = checked === true;
+                        field.onChange(booleanValue);
+                        form.trigger("consentDbsChecks");
+                      }}
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
@@ -969,8 +993,12 @@ export default function StaffRegistration() {
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
+                      checked={!!field.value}
+                      onCheckedChange={(checked) => {
+                        const booleanValue = checked === true;
+                        field.onChange(booleanValue);
+                        form.trigger("agreeTermsConditions");
+                      }}
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
@@ -1019,6 +1047,7 @@ export default function StaffRegistration() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8">
+      <HotReloadFix />
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">

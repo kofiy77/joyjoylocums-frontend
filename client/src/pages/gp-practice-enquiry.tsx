@@ -11,8 +11,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
-import { ArrowLeft, Stethoscope, Mail, Phone, MapPin, Users, Clock, Star, Building, Shield, Heart } from "lucide-react";
+import { ArrowLeft, Stethoscope, Users, Building, Shield, Heart } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
+import HotReloadFix from "@/components/HotReloadFix";
 
 // GP Practice enquiry schema
 const practiceEnquirySchema = z.object({
@@ -187,10 +188,12 @@ export default function GPPracticeEnquiry() {
       ? currentValues.filter((s) => s !== service)
       : [...currentValues, service];
     form.setValue(field, updatedValues);
+    form.trigger(field);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <HotReloadFix />
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -479,7 +482,11 @@ export default function GPPracticeEnquiry() {
                         <Checkbox
                           id={feature.key}
                           checked={form.getValues(feature.key as any) || false}
-                          onCheckedChange={(checked) => form.setValue(feature.key as any, checked)}
+                          onCheckedChange={(checked) => {
+                            const booleanValue = checked === true;
+                            form.setValue(feature.key as any, booleanValue);
+                            form.trigger(feature.key as any);
+                          }}
                         />
                         <Label htmlFor={feature.key} className="text-sm font-normal cursor-pointer">
                           {feature.label}

@@ -6,12 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
-import { ArrowLeft, HeartHandshake, UserPlus, Shield, CheckCircle } from "lucide-react";
+import { ArrowLeft, HeartHandshake, UserPlus, CheckCircle } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
+import HotReloadFix from "@/components/HotReloadFix";
 
 const registrationSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),
@@ -182,6 +183,7 @@ export default function Register() {
       : [...selectedSpecializations, spec];
     setSelectedSpecializations(updated);
     form.setValue("specializations", updated);
+    form.trigger("specializations");
   };
 
   const toggleAvailability = (day: string) => {
@@ -190,10 +192,12 @@ export default function Register() {
       : [...selectedAvailability, day];
     setSelectedAvailability(updated);
     form.setValue("availability", updated);
+    form.trigger("availability");
   };
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(135deg, var(--medical-blue-50) 0%, var(--medical-blue-100) 100%)' }}>
+      <HotReloadFix />
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -596,7 +600,11 @@ export default function Register() {
                     <Checkbox
                       id="consentGMCCheck"
                       checked={form.watch("consentGMCCheck")}
-                      onCheckedChange={(checked) => form.setValue("consentGMCCheck", !!checked)}
+                      onCheckedChange={(checked) => {
+                        const booleanValue = checked === true;
+                        form.setValue("consentGMCCheck", booleanValue);
+                        form.trigger("consentGMCCheck");
+                      }}
                       className="mt-1"
                     />
                     <div>
@@ -618,7 +626,11 @@ export default function Register() {
                     <Checkbox
                       id="consentIndemnityCheck"
                       checked={form.watch("consentIndemnityCheck")}
-                      onCheckedChange={(checked) => form.setValue("consentIndemnityCheck", !!checked)}
+                      onCheckedChange={(checked) => {
+                        const booleanValue = checked === true;
+                        form.setValue("consentIndemnityCheck", booleanValue);
+                        form.trigger("consentIndemnityCheck");
+                      }}
                       className="mt-1"
                     />
                     <div>
@@ -640,7 +652,11 @@ export default function Register() {
                     <Checkbox
                       id="consentUmbrellaCompany"
                       checked={form.watch("consentUmbrellaCompany")}
-                      onCheckedChange={(checked) => form.setValue("consentUmbrellaCompany", !!checked)}
+                      onCheckedChange={(checked) => {
+                        const booleanValue = checked === true;
+                        form.setValue("consentUmbrellaCompany", booleanValue);
+                        form.trigger("consentUmbrellaCompany");
+                      }}
                       className="mt-1"
                     />
                     <div>
@@ -665,7 +681,11 @@ export default function Register() {
                     <Checkbox
                       id="agreeTerms"
                       checked={form.watch("agreeTerms")}
-                      onCheckedChange={(checked) => form.setValue("agreeTerms", !!checked)}
+                      onCheckedChange={(checked) => {
+                        const booleanValue = checked === true;
+                        form.setValue("agreeTerms", booleanValue);
+                        form.trigger("agreeTerms");
+                      }}
                       className="mt-1"
                     />
                     <div>
