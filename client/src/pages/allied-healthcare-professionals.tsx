@@ -447,7 +447,7 @@ export default function AlliedHealthcareProfessionals() {
             <div>
               <h4 className="text-lg font-semibold mb-4">AHP Professionals</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/register" className="hover:text-white transition-colors">Register</Link></li>
+                <li><Link href="/staff-registration" className="hover:text-white transition-colors">Register</Link></li>
                 <li><Link href="/allied-healthcare-professionals" className="hover:text-white transition-colors">Find Opportunities</Link></li>
                 <li><Link href="/training-centre" className="hover:text-white transition-colors">Training Centre</Link></li>
               </ul>
