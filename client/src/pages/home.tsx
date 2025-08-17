@@ -128,10 +128,6 @@ export default function Home() {
                     <span className="text-white">medical locum</span><br />
                     opportunities
                   </h1>
-                  <p className="text-xl text-gray-200 leading-relaxed max-w-xl">
-                    Connect with premium locum opportunities across all medical specialties. Professional, reliable, and designed for healthcare excellence.
-                  </p>
-
                 </div>
                 
                 {/* Call-to-Action Buttons - Stacked Vertically */}
