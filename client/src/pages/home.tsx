@@ -110,9 +110,12 @@ export default function Home() {
       {/* Hero Section - Full Width with Background Image */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-cover bg-center bg-no-repeat" 
                style={{ 
-                 backgroundImage: `url(${homeHeroImage})`,
-                 backgroundPosition: 'center center',
                  backgroundImage: `linear-gradient(rgba(30, 37, 99, 0.7), rgba(30, 37, 99, 0.7)), url(${homeHeroImage})`,
+                 backgroundPosition: 'center center',
+                 backgroundSize: 'cover',
+                 transform: 'scaleX(-1)'
+               }}>
+        <div className="absolute inset-0 flex items-center" style={{ transform: 'scaleX(-1)' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <div className="space-y-8">
@@ -227,16 +230,16 @@ export default function Home() {
 
                 <div className="flex items-center gap-6 pt-4">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-[#1e2563] drop-shadow-lg">500+</div>
-                    <div className="text-sm text-[#1e2563] drop-shadow-md">Active Locums</div>
+                    <div className="text-3xl font-bold text-white drop-shadow-lg">500+</div>
+                    <div className="text-sm text-gray-200 drop-shadow-md">Active Locums</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-[#1e2563] drop-shadow-lg">150+</div>
-                    <div className="text-sm text-[#1e2563] drop-shadow-md">Partner Practices</div>
+                    <div className="text-3xl font-bold text-white drop-shadow-lg">150+</div>
+                    <div className="text-sm text-gray-200 drop-shadow-md">Partner Practices</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-[#1e2563] drop-shadow-lg">98%</div>
-                    <div className="text-sm text-[#1e2563] drop-shadow-md">Satisfaction Rate</div>
+                    <div className="text-3xl font-bold text-white drop-shadow-lg">98%</div>
+                    <div className="text-sm text-gray-200 drop-shadow-md">Satisfaction Rate</div>
                   </div>
                 </div>
               </div>
