@@ -14,8 +14,7 @@ import {
   CheckCircle,
   HeartHandshake
 } from "lucide-react";
-import gpHeroImage from "@/assets/image_1753233763433.jpeg";
-
+import gpHeroImage from "../assets/shutterstock_430385620_1753232327688.jpg"
 export default function GPLocumsPage() {
   const benefits = [
     {
