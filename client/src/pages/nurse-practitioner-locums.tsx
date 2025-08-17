@@ -16,7 +16,7 @@ import {
   UserCheck,
   HeartHandshake
 } from "lucide-react";
-import npHeroImage from "@/assets/image_1753233114194.jpeg";
+import npHeroImage from "@/assets/image_1753233763433.jpeg";
 
 export default function NursePractitionerLocumsPage() {
   const benefits = [
@@ -223,10 +223,12 @@ export default function NursePractitionerLocumsPage() {
                       <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-gray-700 italic mb-6">"{testimonial.quote}"</p>
-                  <div className="border-t pt-4">
+                  <blockquote className="text-lg italic text-gray-700 mb-4">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div>
                     <div className="font-semibold text-[#1e2563]">{testimonial.name}</div>
-                    <div className="text-gray-500 text-sm">{testimonial.location}</div>
+                    <div className="text-gray-600">{testimonial.location}</div>
                   </div>
                 </CardContent>
               </Card>
@@ -241,35 +243,23 @@ export default function NursePractitionerLocumsPage() {
           <h2 className="text-4xl font-bold text-[#1e2563] mb-6">
             Ready to Advance Your Nursing Career?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of Nurse Practitioners who have found rewarding positions through JoyJoy Locums. 
-            Start your application today.
+          <p className="text-xl text-gray-600 mb-8">
+            Join our network of Advanced Nurse Practitioners making a difference in patient care.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/register">
-              <Button 
-                size="lg" 
-                className="px-8 py-4 text-lg font-semibold bg-purple-600 text-white hover:bg-purple-700 transition-all duration-300"
-              >
-                Apply Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/gp-practice-enquiry">
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="px-8 py-4 text-lg font-semibold border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white transition-all duration-300"
-              >
-                Contact Us
-              </Button>
-            </Link>
-          </div>
+          <Link href="/register">
+            <Button 
+              size="lg" 
+              className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-3 text-lg font-semibold"
+            >
+              Register Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer style={{ backgroundColor: '#1e2563' }} className="text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
@@ -277,48 +267,32 @@ export default function NursePractitionerLocumsPage() {
                 <HeartHandshake className="h-8 w-8 mr-3 text-white" />
                 <span className="text-2xl font-bold">JoyJoy Locums</span>
               </div>
-              <p className="text-gray-400 mb-6 max-w-md">
-                Connecting exceptional Nurse Practitioners with leading GP practices across the UK. 
-                Professional excellence, personal support.
+              <p className="text-blue-200 mb-6 max-w-md">
+                The UK's leading platform for Advanced Nurse Practitioner opportunities. 
+                Connecting exceptional healthcare professionals with premier medical practices.
               </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-gray-400">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  London, United Kingdom
-                </div>
-              </div>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">For Nurse Practitioners</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-lg font-semibold mb-4">For Medical Professionals</h4>
+              <ul className="space-y-2 text-blue-200">
+                <li><Link href="/gp-locums" className="hover:text-white transition-colors">GP Opportunities</Link></li>
+                <li><Link href="/nurse-practitioner-locums" className="hover:text-white transition-colors">Advanced Nurse Practitioner</Link></li>
                 <li><Link href="/register" className="hover:text-white transition-colors">Register</Link></li>
-                <li><Link href="/auth" className="hover:text-white transition-colors">Sign In</Link></li>
-                <li><Link href="/training-centre" className="hover:text-white transition-colors">Training Centre</Link></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">For Practices</h4>
-              <ul className="space-y-2 text-gray-400">
+              <h4 className="text-lg font-semibold mb-4">For GP Practices</h4>
+              <ul className="space-y-2 text-blue-200">
                 <li><Link href="/gp-practice-enquiry" className="hover:text-white transition-colors">Join Our Network</Link></li>
                 <li><Link href="/auth" className="hover:text-white transition-colors">Practice Portal</Link></li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm">
-              © 2025 JoyJoy Locums. All rights reserved.
-            </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms-of-service" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-            </div>
+          <div className="border-t border-blue-800 mt-12 pt-8 text-center text-blue-200 text-sm">
+            © 2025 JoyJoy Locums. All rights reserved.
           </div>
         </div>
       </footer>
