@@ -16,8 +16,7 @@ import {
   UserCheck,
   HeartHandshake
 } from "lucide-react";
-import npHeroImage from "@/assets/image_1753233763433.jpeg";
-
+import npHeroImage from "../assets/image_1753233114194.jpeg";
 export default function NursePractitionerLocumsPage() {
   const benefits = [
     {
